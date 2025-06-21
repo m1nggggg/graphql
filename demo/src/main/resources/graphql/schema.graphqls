@@ -1,0 +1,18 @@
+# Defines the structure of a Book object
+type Book {
+    id: ID!
+    title: String
+    author: String
+}
+
+# Defines all the available read operations
+type Query {
+    # This 'books' query maps to your 'books()' method in BookGraphQL.kt
+    books: [Book]
+}
+
+# Defines all the available write operations
+type Mutation {
+    # This 'createBook' mutation maps to your 'createBook()' method
+    createBook(title: String!, author: String!): Book
+}
