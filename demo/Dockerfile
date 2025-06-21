@@ -36,7 +36,7 @@ USER appuser
 COPY --from=builder /app/target/*.jar app.jar
 
 # Expose the port that the Spring Boot application listens on
-EXPOSE 8080
+EXPOSE 10001
 
 # The command to run when the container starts
 ENTRYPOINT ["java", "-jar", "app.jar"]
